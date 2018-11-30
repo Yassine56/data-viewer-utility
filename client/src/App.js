@@ -4,6 +4,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 import Graph from './components/Graph';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 class App extends Component {
@@ -13,7 +14,6 @@ class App extends Component {
           <BrowserRouter>
              <div>
                <Route path="/" component={Header} />
-               <Route exact path="/graph" component={Graph} />
                <Route
                     path="/kwh"
                     render={(props) => <Graph {...props} metric="kwh"/>}
@@ -26,6 +26,7 @@ class App extends Component {
                   path="/savings"
                   render={(props) => <Graph {...props} metric="savings"/>}
             />
+          <Route path="/" component={Footer} />
              </div>
 
           </BrowserRouter>

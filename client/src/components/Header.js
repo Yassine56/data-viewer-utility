@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 class Header extends Component{
   render(){
-    console.log("header compo");
     return(
       <div>
 
