@@ -7,7 +7,7 @@ class Graph extends Component {
     this.state = {
       options: {
         chart: {
-          id: "basic-bar"
+          id: ""
         },
         xaxis: {
           categories: []
@@ -15,7 +15,7 @@ class Graph extends Component {
       },
       series: [
         {
-          name: "Bill",
+          name: "",
           data: []
         }
       ]
@@ -64,7 +64,7 @@ class Graph extends Component {
               options={this.state.options}
               series={this.state.series}
               type="bar"
-              width="500"
+              width="800"
             />
           </div>
         </div>
