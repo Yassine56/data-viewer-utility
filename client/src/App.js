@@ -14,6 +14,18 @@ class App extends Component {
              <div>
                <Route path="/" component={Header} />
                <Route exact path="/graph" component={Graph} />
+               <Route
+                    path="/kwh"
+                    render={(props) => <Graph {...props} metric="kwh"/>}
+              />
+              <Route
+                   path="/bill"
+                   render={(props) => <Graph {...props} metric="bill"/>}
+             />
+             <Route
+                  path="/savings"
+                  render={(props) => <Graph {...props} metric="savings"/>}
+            />
              </div>
 
           </BrowserRouter>

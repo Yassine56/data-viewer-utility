@@ -4,6 +4,7 @@ import axios from 'axios';
 class Graph extends Component {
   constructor(props) {
     super(props);
+    console.log(this.props.metric);
     this.state = {
       options: {
         chart: {
@@ -22,7 +23,8 @@ class Graph extends Component {
     };
 
   }
-  async fetchState(){
+  async fetchState(props){
+    const metric = this.props.metric;
     const data = await axios.get('/api/data');
         console.log(data);
     data.data.sort((a,b)=>{
@@ -34,7 +36,7 @@ class Graph extends Component {
 
     })
     const series = data.data.map((el)=>{
-      return el.bill;
+      return el[metric];
     });
     this.setState({
       options: {
@@ -47,7 +49,7 @@ class Graph extends Component {
       },
       series: [
         {
-          name: "Bill",
+          name: metric,
           data: series
         }
       ]
