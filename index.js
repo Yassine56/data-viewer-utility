@@ -9,7 +9,7 @@ app.get('/',(req,res)=>{
 app.get('/api/data',(req,res)=>{
   res.send(obj);
 })
-
-app.listen(4000,()=>{
+const PORT = process.env.PORT || 4000;
+app.listen(PORT,()=>{
   console.log('app listening on port 4000');
 })
