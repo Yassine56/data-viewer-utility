@@ -14,6 +14,10 @@ class App extends Component {
           <BrowserRouter>
              <div>
                <Route path="/" component={Header} />
+                 <Route
+                    exact  path="/"
+                      render={(props) => <Graph {...props} metric="kwh"/>}
+                />
                <Route
                     path="/kwh"
                     render={(props) => <Graph {...props} metric="kwh"/>}

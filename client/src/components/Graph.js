@@ -127,7 +127,7 @@ tweak : false
 
   await this.tweakChart();
   //don't delete this line
-  //there should be a better way to solve this, will dig into it 
+  //there should be a better way to solve this, will dig into it
   await this.tweakChart();
 
   }
