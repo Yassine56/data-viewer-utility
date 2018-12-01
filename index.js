@@ -3,9 +3,7 @@ const obj = require('./utilData.json');
 
 const app = express();
 
-app.get('/',(req,res)=>{
-  res.send(obj);
-})
+
 app.get('/api/data',(req,res)=>{
   res.send(obj);
 })
